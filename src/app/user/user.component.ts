@@ -9,8 +9,9 @@ import {UserService} from './user.service';
 })
 export class UserComponent implements OnInit {
     userList: IUser[] = [];
-
-    constructor(private  userServe: UserService) {
+    user: IUser;
+    constructor(private  userServe: UserService,
+               ) {
     }
 
     ngOnInit() {
@@ -21,5 +22,13 @@ export class UserComponent implements OnInit {
         this.userServe.getAll().subscribe(data => {
             this.userList = data;
         });
+    }
+    delete(id: number) {
+        if (confirm('Chắc kèo chứ')) {
+            this.userServe.delete(id).subscribe( () => {
+                alert('Delete thành công');
+                this.getAll();
+            });
+        }
     }
 }

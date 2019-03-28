@@ -18,7 +18,7 @@
         <td>{{user.name}}</td>
         <td>{{user.email}}</td>
         <td><a class="btn btn-info" [routerLink]="[ '/user', user.id]">SHOW</a></td>
-        <td><a>DELETE</a></td>
+        <td><a class="btn btn-danger" (click)="delete(user.id)">DELETE</a></td>
         <td><a class="btn btn-info">EDIT</a> </td>
       </tr>
       </tbody>

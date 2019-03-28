@@ -12,9 +12,11 @@ import {FormBuilder} from '@angular/forms';
 export class UserCreateComponent implements OnInit {
   userList: IUser[] = [];
   userForm = this.fb.group({
+    id: [''],
     name: [''],
     email: [''],
-    password: [''],
+    password: ['']
+
   });
   constructor(private userServe: UserService,
               private route: Router,
@@ -28,6 +30,6 @@ export class UserCreateComponent implements OnInit {
       return this.userServe.create(value).subscribe(next => {
         this.userList.unshift(value);
         this.route.navigate(['../list]']);
-      }, error1 => alert('Input Again'));
+      }, error1 => alert('Lỗi'));
     }
 }

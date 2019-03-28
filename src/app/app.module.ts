@@ -9,6 +9,7 @@ import {UserDetailComponent} from './user-detail/user-detail.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { UserEditComponent } from './user-edit/user-edit.component';
 import { UserCreateComponent } from './user-create/user-create.component';
+import { UserDeleteComponent } from './user-delete/user-delete.component';
 
 
 
@@ -18,7 +19,8 @@ import { UserCreateComponent } from './user-create/user-create.component';
         UserComponent,
         UserDetailComponent,
         UserEditComponent,
-        UserCreateComponent
+        UserCreateComponent,
+        UserDeleteComponent
     ],
     imports: [
         BrowserModule,
