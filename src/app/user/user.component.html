@@ -1,0 +1,27 @@
+
+<div class="container">
+  <div class="row mt-3">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-light text-center">
+      <tr>
+        <th scope="col">STT</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Show</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Remove</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let user of userList; index as i">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td><a class="btn btn-info" [routerLink]="[ '/user', user.id]">SHOW</a></td>
+        <td><a>DELETE</a></td>
+        <td><a class="btn btn-info">EDIT</a> </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
